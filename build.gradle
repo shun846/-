@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files("/path/to/burp-montoya-api.jar")
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'burp.extension.resender.ResendExample'
+        )
+    }
+}
